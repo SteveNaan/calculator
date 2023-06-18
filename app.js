@@ -57,9 +57,9 @@ numberButtons.forEach(function (button) {
         screen += number;
         screenElement.textContent = screen;
         if (!operand) {
-            num1 = parseInt(screen);
+            num1 = parseFloat(screen);
         } else {
-            num2 = parseInt(screen);
+            num2 = parseFloat(screen);
         }
     });
 });
@@ -68,7 +68,11 @@ operandButtons.forEach(function (button) {
     button.addEventListener("click", function () {
         if(button.textContent == "="){
             operate();
-            num2 = parseInt(screen);
+            num2 = parseFloat(screen);
+        }
+        else if(button.textContent == "." && !screen.includes('.')){
+            screen += ".";
+            screenElement.textContent = screen;
         }
         else{
             operand = button.textContent;
@@ -88,9 +92,9 @@ deleteButton.addEventListener("click", function () {
     screen = screen.slice(0, -1);
     screenElement.textContent = screen;
     if (!operand) {
-        num1 = parseInt(screen) || 0;
+        num1 = parseFloat(screen) || 0;
     } else {
-        num2 = parseInt(screen) || 0;
+        num2 = parseFloat(screen) || 0;
     }
 });
 
