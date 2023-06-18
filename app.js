@@ -1,18 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
 function add(num1, num2){
-    return num1 + num2
+    if(num1 + num2 === 69){
+        return (num1 + num2) + " Nice! 👁️👄👁️ ";
+    }
+    else{
+        return num1 + num2
+    }
 }
 
 function subtract(num1, num2){
-    return num1 - num2
+    if(num1 - num2 === 69){
+        return (num1 - num2) + " Nice! 👁️👄👁️ ";
+    }
+    else{
+        return num1 - num2
+    }
 }
 
 function multiply(num1, num2){
-    return num1 * num2
+    if(num1 * num2 === 69){
+        return (num1 * num2) + " Nice! 👁️👄👁️ ";
+    }
+    else{
+        return num1 * num2
+    }
 }
 
 function divide(num1, num2){
-    return num1 / num2
+    if(num1 === 0 || num2 === 0){
+        return "Error 69: You're an idiot! You cannot divide by zero!";
+    }
+    else{
+        return num1 / num2;
+    }
 }
 
 let num1 = 0;
