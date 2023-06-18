@@ -41,20 +41,20 @@ body {
 }
  
 button {
+    transition: transform 0.35s ease-in-out;
+    transition: filter 0.35s ease-in-out;
     border: 2px solid rgb(65, 65, 65);
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
+    height: 10vmin;
+    width: 15vmin;
+
 }
 
 .clear, .delete{
     height: 10vmin;
     width: 30vmin;
-}
-
-.button {
-    height: 10vmin;
-    width: 15vmin;
 }
 
 .screen {
@@ -63,11 +63,26 @@ button {
     width: 60vmin;
     height: 10vmin;
     text-align: end;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
+}
+
+button:hover {
+    transition: transform 0.35s ease-in-out;
+    transition: filter 0.35s ease-in-out;
+    transform: scale(1.01); 
+    filter: brightness(50%);
 }
 
 button:active {
     box-shadow: 0 0 1px darkslategray;
     transform: translateY(1px);
+}
+
+.clear {
+    background-color: rgb(255, 159, 159);
+}
+
+.delete {
+    background-color: rgb(168, 168, 255);
 }
