@@ -58,6 +58,13 @@ function operate(){
         default:
             return;
     }
+    if(result.toString().includes('Error')) {
+        screenElement.style.color = "red";
+    } else if(result.toString().includes('Nice!')) {
+        screenElement.style.color = "pink";
+    } else {
+        screenElement.style.color = "black";
+    }
     num1 = result;
     num2 = 0;
     operand = "";
@@ -76,6 +83,7 @@ numberButtons.forEach(function (button) {
         const number = button.textContent;
         screen += number;
         screenElement.textContent = screen;
+        screenElement.style.color = "black";
         if (!operand) {
             num1 = parseFloat(screen);
         } else {
@@ -93,6 +101,7 @@ operandButtons.forEach(function (button) {
         else if(button.textContent == "." && !screen.includes('.')){
             screen += ".";
             screenElement.textContent = screen;
+            screenElement.style.color = "black";
         }
         else{
             operand = button.textContent;
@@ -104,6 +113,7 @@ operandButtons.forEach(function (button) {
 clearButton.addEventListener("click", function () {
     screen = "";
     screenElement.textContent = screen;
+    screenElement.style.color = "black";
     num1 = 0;
     num2 = 0;
 });
@@ -111,6 +121,7 @@ clearButton.addEventListener("click", function () {
 deleteButton.addEventListener("click", function () {
     screen = screen.slice(0, -1);
     screenElement.textContent = screen;
+    screenElement.style.color = "black";
     if (!operand) {
         num1 = parseFloat(screen) || 0;
     } else {

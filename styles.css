@@ -106,3 +106,7 @@ button:active {
     color: orangered;
     background-color: rgb(76, 76, 76);
 }
+
+#equals {
+    color: aqua;
+}
